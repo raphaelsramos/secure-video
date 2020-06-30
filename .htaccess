@@ -1,0 +1,3 @@
+# https://www.opentechguides.com/how-to/article/apache/115/htaccess-file-dir-security.html
+# Disable directory browsing
+Options -Indexes

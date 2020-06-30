@@ -1,0 +1,11 @@
+# https://stackoverflow.com/questions/9282124/deny-direct-access-to-a-folder-and-file-by-htaccess
+# https://serverfault.com/questions/111788/using-htaccess-to-protect-direct-access-of-files
+
+#Deny from all
+#ErrorDocument 403 "nothing is here"
+
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_REFERER} !^%{HTTP_HOST}$ [NC]
+RewriteRule \.*$ /php/secure-video/404.html [R,L]
